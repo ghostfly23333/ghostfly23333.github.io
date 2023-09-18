@@ -39,7 +39,10 @@
 
 <link rel="stylesheet" href="/css/main.css" />
 
-    <meta name="generator" content="Hexo 6.3.0"></head>
+    <meta name="generator" content="Hexo 6.3.0"><link rel="stylesheet" href="\assets\css\APlayer.min.css" class="aplayer-style-marker">
+<script src="\assets\js\APlayer.min.js" class="aplayer-script-marker"></script>
+<script src="\assets\js\Meting.min.js" class="meting-script-marker"></script>
+</head>
     <body>
         <div id="layout">
             <transition name="fade">
@@ -162,16 +165,34 @@
     
     <div class="content" v-pre>
         <blockquote>
-<p>你发现了这个页面！看上去你想认识我呢！<code>(*ﾟﾛﾟ)</code><br>太棒了，又多了一个潜在的朋友！<code>ヾ(^∀^)ﾉ</code></p>
+<p>你发现了这个页面！看上去你想认识我呢！(*ﾟﾛﾟ)<br>太棒了，又多了一个潜在的朋友！ヾ(^∀^)ﾉ</p>
 </blockquote>
 <hr>
-<h2 id="question-你是"><a href="#question-你是" class="headerlink" title=":question: 你是?"></a>:question: 你是?</h2><ul>
+
+    <div id="aplayer-vDRRvBrX" class="aplayer aplayer-tag-marker meting-tag-marker"
+         data-id="1930006523" data-server="netease" data-type="song" data-mode="circulation" data-autoplay="true" data-mutex="true" data-listmaxheight="340px" data-preload="auto" data-theme="#555"
+    ></div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script> 
+let ref = setInterval(function(){	//每隔2秒尝试播放一次
+    isaplay();
+},2000);
+function isaplay(){
+    $(".aplayer-play").click()	//尝试播放
+    setTimeout(function() {		//延时100毫秒再执行其内部的判断
+        if($(".aplayer-pause").length > 0){    //`aplayer-button aplayer-pause`是否存在
+        clearInterval(ref);		//停止Interval，即停止循环
+    }}, 100);
+}
+</script>
+
+<h2 id="你是"><a href="#你是" class="headerlink" title=" 你是?"></a><span class="github-emoji" alias="question" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2753.png?v8">&#x2753;</span> 你是?</h2><ul>
 <li>一个二次元（欢迎贴贴！）</li>
 <li>一个随遇而安的人，做啥都三分钟热度（没错！这blog就是突发奇想搭的）</li>
 <li>BUPTer</li>
 </ul>
 <hr>
-<h2 id="sparkles-联系方式？"><a href="#sparkles-联系方式？" class="headerlink" title=":sparkles: 联系方式？"></a>:sparkles: 联系方式？</h2><table>
+<h2 id="联系方式？"><a href="#联系方式？" class="headerlink" title=" 联系方式？"></a><span class="github-emoji" alias="sparkles" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2728.png?v8">&#x2728;</span> 联系方式？</h2><table>
 <thead>
 <tr>
 <th>Platform</th>
@@ -184,7 +205,7 @@
 </tr>
 <tr>
 <td>Email</td>
-<td><a href="mailto:&#x67;&#x68;&#x6f;&#115;&#116;&#x66;&#x6c;&#121;&#x32;&#x33;&#x33;&#x40;&#111;&#117;&#x74;&#x6c;&#111;&#x6f;&#x6b;&#x2e;&#99;&#x6f;&#x6d;">&#x67;&#x68;&#x6f;&#115;&#116;&#x66;&#x6c;&#121;&#x32;&#x33;&#x33;&#x40;&#111;&#117;&#x74;&#x6c;&#111;&#x6f;&#x6b;&#x2e;&#99;&#x6f;&#x6d;</a></td>
+<td><a href="mailto:&#103;&#104;&#x6f;&#x73;&#116;&#102;&#108;&#121;&#x32;&#51;&#x33;&#64;&#x6f;&#117;&#x74;&#108;&#111;&#x6f;&#107;&#x2e;&#x63;&#111;&#109;">&#103;&#104;&#x6f;&#x73;&#116;&#102;&#108;&#121;&#x32;&#51;&#x33;&#64;&#x6f;&#117;&#x74;&#108;&#111;&#x6f;&#107;&#x2e;&#x63;&#111;&#109;</a></td>
 </tr>
 <tr>
 <td>Github</td>
