@@ -1,0 +1,385 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>夏令营游记&amp;&amp;后日谈 | ghostfly の小窝</title>
+        <meta name="author" content="ghostfly" />
+        <meta name="description" content="" />
+        <meta name="keywords" content="" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+        <link rel="icon" href="/images/preview.jpg" />
+        <script src="https://cdn.staticfile.org/vue/3.3.4/vue.global.prod.min.js"></script>
+<link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/6.4.0/css/all.min.css" />
+<link rel="stylesheet" href="/css/fonts.min.css" />
+<script> const mixins = {}; </script>
+
+<script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+
+
+<script src="https://cdn.staticfile.org/highlight.js/11.8.0/highlight.min.js"></script>
+<script src="https://cdn.staticfile.org/highlightjs-line-numbers.js/2.8.0/highlightjs-line-numbers.min.js"></script>
+<link
+    rel="stylesheet"
+    href="https://cdn.staticfile.org/highlight.js/11.8.0/styles/github.min.css"
+/>
+<script src="/js/lib/highlight.js"></script>
+
+
+
+<script src="/js/lib/preview.js"></script>
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/css/main.css" />
+
+    <meta name="generator" content="Hexo 6.3.0"></head>
+    <body>
+        <div id="layout">
+            <transition name="fade">
+                <div id="loading" v-show="loading">
+                    <div id="loading-circle">
+                        <h2>LOADING</h2>
+                        <p>加载过慢请开启缓存 浏览器默认开启</p>
+                        <img src="/images/loading.gif" />
+                    </div>
+                </div>
+            </transition>
+            <div id="menu" :class="{ hidden: hiddenMenu, 'menu-color': menuColor}">
+    <nav id="desktop-menu">
+        <a class="title" href="/">
+            <span>GHOSTFLY の小窝</span>
+        </a>
+        
+        <a href="/">
+            <i class="fa-solid fa-house fa-fw"></i>
+            <span>&ensp;Home</span>
+        </a>
+        
+        <a href="/about">
+            <i class="fa-solid fa-id-card fa-fw"></i>
+            <span>&ensp;About</span>
+        </a>
+        
+        <a href="/archives">
+            <i class="fa-solid fa-box-archive fa-fw"></i>
+            <span>&ensp;Archives</span>
+        </a>
+        
+        <a href="/categories">
+            <i class="fa-solid fa-bookmark fa-fw"></i>
+            <span>&ensp;Categories</span>
+        </a>
+        
+        <a href="/tags">
+            <i class="fa-solid fa-tags fa-fw"></i>
+            <span>&ensp;Tags</span>
+        </a>
+        
+        <a href="/gifts">
+            <i class="fa-solid fa-gifts fa-fw"></i>
+            <span>&ensp;Gifts</span>
+        </a>
+        
+    </nav>
+    <nav id="mobile-menu">
+        <div class="title" @click="showMenuItems = !showMenuItems">
+            <i class="fa-solid fa-bars fa-fw"></i>
+            <span>&emsp;GHOSTFLY の小窝</span>
+        </div>
+        <transition name="slide">
+            <div class="items" v-show="showMenuItems">
+                
+                <a href="/">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-house fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Home</div>
+                    </div>
+                </a>
+                
+                <a href="/about">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-id-card fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">About</div>
+                    </div>
+                </a>
+                
+                <a href="/archives">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-box-archive fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Archives</div>
+                    </div>
+                </a>
+                
+                <a href="/categories">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-bookmark fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Categories</div>
+                    </div>
+                </a>
+                
+                <a href="/tags">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-tags fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Tags</div>
+                    </div>
+                </a>
+                
+                <a href="/gifts">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-gifts fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Gifts</div>
+                    </div>
+                </a>
+                
+            </div>
+        </transition>
+    </nav>
+</div>
+<transition name="fade">
+    <div id="menu-curtain" @click="showMenuItems = !showMenuItems" v-show="showMenuItems"></div>
+</transition>
+
+            <div id="main" :class="loading ? 'into-enter-from': 'into-enter-active'">
+                <div class="article">
+    <div>
+        <h1>夏令营游记&amp;&amp;后日谈</h1>
+    </div>
+    <div class="info">
+        <span class="date">
+            <span class="icon">
+                <i class="fa-solid fa-calendar fa-fw"></i>
+            </span>
+            2023/9/29
+        </span>
+        
+        <span class="category">
+            <a href="/categories/%E6%97%A5%E5%B8%B8/">
+                <span class="icon">
+                    <i class="fa-solid fa-bookmark fa-fw"></i>
+                </span>
+                日常
+            </a>
+        </span>
+        
+        
+        <span class="tags">
+            <span class="icon">
+                <i class="fa-solid fa-tags fa-fw"></i>
+            </span>
+            
+            
+            <span class="tag">
+                
+                <a href="/tags/Diary/" style="color: #ffa2c4">Diary</a>
+            </span>
+            
+        </span>
+        
+    </div>
+    
+    <div class="content" v-pre>
+        <h1 id="夏令营游记"><a href="#夏令营游记" class="headerlink" title="夏令营游记"></a>夏令营游记</h1><hr>
+<h3 id="填报-day"><a href="#填报-day" class="headerlink" title="填报 - day-?"></a>填报 - day-?</h3><p>报夏令营前还是比较自信的，大概有想去的念头的就TP、上交、北航和计算所，所以就报了清叉，THUCS，PKUCS，上交IPADS、北航CS &amp;&amp; 计算所。实际上倒也对自己的判断比较准确，北航应该是能够保底的，TP上交大概总能进一个的吧？</p>
+<p>文笔实在是差，所以就按时间顺序来哩</p>
+<hr>
+<h2 id="清华"><a href="#清华" class="headerlink" title="清华"></a>清华</h2><p>我去！是清华！高中梦校！</p>
+<h3 id="清叉-day0"><a href="#清叉-day0" class="headerlink" title="清叉 - day0"></a>清叉 - day0</h3><p>大三就是在清叉的老师实习了一年系统安全，但是老师今年想找AI system的学生，所以…..</p>
+<p>嘛，被拒了</p>
+<h3 id="THUCS-day0"><a href="#THUCS-day0" class="headerlink" title="THUCS - day0"></a>THUCS - day0</h3><p>虽然一个老师也没提前联系，但是入营了……</p>
+<p>和北航冲了，夏令营不给名额，得等到九推</p>
+<p>so……</p>
+<p>丢啦！</p>
+<p>要是没保底就没学上啦，还是稳一手.jpg（主要是没提前联系，所以感觉希望不是很大，实际上THUCS确实没提前联系&#x3D;寄）</p>
+<hr>
+<h2 id="北航"><a href="#北航" class="headerlink" title="北航"></a>北航</h2><p>诶？你是？哦，是隔壁诶，好久不见！</p>
+<h3 id="北航CS-day0"><a href="#北航CS-day0" class="headerlink" title="北航CS - day0"></a>北航CS - day0</h3><p>放弃 THUCS 来的，so…</p>
+<p>拿下，这很重要！</p>
+<p>是第一次夏令营呢！好在机试用CSP抵了，所以倒也不用去机试和OI赛制拼死拼活。</p>
+<p>早就听说面试全是八股，压力面非常吓人，基本功什么都考对我简直就是绝杀，哪有人学完基础课还能记两年的啊kora</p>
+<p>临时找了一堆资料进行突击.jpg</p>
+<p>平凡的一天</p>
+<h3 id="北航CS-day1"><a href="#北航CS-day1" class="headerlink" title="北航CS - day1"></a>北航CS - day1</h3><p>诶嘿，进复试了！还是day2！ 复习时间++</p>
+<p>熬夜苦读.jpg</p>
+<p>什么？同学都被拷打哭了？压力++</p>
+<h3 id="北航CS-day2"><a href="#北航CS-day2" class="headerlink" title="北航CS - day2"></a>北航CS - day2</h3><p>虽然非常的紧张，但是——</p>
+<p>神奇的强运！面试主考官是系统结构的！</p>
+<p>基础题问一半不问了问哥们论文，那这必是拿下了.jpg（概率论都被问穿了都）</p>
+<h3 id="北航CS-day3"><a href="#北航CS-day3" class="headerlink" title="北航CS - day3"></a>北航CS - day3</h3><p>优营了！</p>
+<p>考虑到未来很有可能咕咕，所以并没有提前联系导师</p>
+<p>找了个系统结构的方向的导师，聊了一下拿到了保底.jpg</p>
+<h3 id="北航CS-dayN"><a href="#北航CS-dayN" class="headerlink" title="北航CS - dayN"></a>北航CS - dayN</h3><p>拿到上交 offer 哩，咕咕</p>
+<hr>
+<h2 id="北大"><a href="#北大" class="headerlink" title="北大"></a>北大</h2><p>诶PKU开放报名了！也没提前联系导师…那就随便报报？说不定还能蹭个饭呢！</p>
+<h3 id="PKUCS-day-1"><a href="#PKUCS-day-1" class="headerlink" title="PKUCS - day-1"></a>PKUCS - day-1</h3><p>不得不吐槽，北大的材料和流程是真的很麻烦诶！报名截止前一天才把材料全部搞齐，还得线下送过去.jpg</p>
+<p>报名截止前一天有导师回了邮件，或许是个好兆头？</p>
+<h3 id="PKUCS-day0-3"><a href="#PKUCS-day0-3" class="headerlink" title="PKUCS - day0.3"></a>PKUCS - day0.3</h3><p>开营仪式，狠狠的给哥们一点PKU震撼了</p>
+<p>为什么打饭是全自动的…</p>
+<p>为什么夏天有西瓜吃…</p>
+<p>为什么走廊有插电自习桌子…</p>
+<p>为什么…这！么！大！</p>
+<p>小破游人蹲地画圈ing</p>
+<p>晚上需要机试，所以狠狠的看了看机试题目</p>
+<p>不到两个小时7-8题，似乎是手速场呢</p>
+<h3 id="PKUCS-day0-8"><a href="#PKUCS-day0-8" class="headerlink" title="PKUCS - day0.8"></a>PKUCS - day0.8</h3><p>机试启动！是时候表演真正的技术了！</p>
+<p>唔哇…剪枝…状压…</p>
+<p>…</p>
+<p>诶嘿，被打倒了</p>
+<p>最后差两题没做出来，不过哥们的手速还是很快的，拿了两题还是三题一血？</p>
+<p>最后排名rk9，也还凑合，听说机试和最后的面试没有直接关系，只做参考</p>
+<p>So, have fun!</p>
+<h3 id="PKUCS-day1"><a href="#PKUCS-day1" class="headerlink" title="PKUCS - day1"></a>PKUCS - day1</h3><p>面试还是很有意思的， PKU 的老师上强度还是有一手的</p>
+<p>不过没有被问穿，就基础知识考察可能扣了点分.jpg</p>
+<p>在等候室认识了好多很强的同学，有PKU本校的强强，也有现在在THUCS的边佬！</p>
+<p>西瓜…西瓜好吃！饭卡不吃完成何体统</p>
+<p>下午和初中同学好好的面了个基吐槽了一下国内大学教育环境，所见略同.jpg</p>
+<p>虽然有3天入校权限，但是主要是直接在 PKU 坐着也比较无聊，所以就没去啦</p>
+<h3 id="PKUCS-day"><a href="#PKUCS-day" class="headerlink" title="PKUCS - day?"></a>PKUCS - day?</h3><p>没优营呢？似乎是组里内定好了名额的样子，不过问题不大，饭蹭到了！</p>
+<p>后续也给我发了有名额的老师，不过没怎么感兴趣就没回邮件啦</p>
+<hr>
+<h2 id="上交"><a href="#上交" class="headerlink" title="上交"></a>上交</h2><p>二次元即将到达他忠实的家，上海！之所以来上交，就是因为 IPADS 。</p>
+<p>在大二学系统方向的论文的时候，OSDI 里就数次看到过 IPADS 这个名字，当时看到是上交的实验室还是比较震撼的。</p>
+<p>后来逐渐了解到了 IPADS 极其恐怖的实力之后，就萌生了报的念头</p>
+<p>“跟很强的人在一起学习，就是再笨也会变强的吧”</p>
+<p>大三的时候给自己方向比较 match 的夏老师发了邮件，暂时性的石沉大海了</p>
+<p>直到——</p>
+<p>OSDI中稿</p>
+<h3 id="IPADS-day-3"><a href="#IPADS-day-3" class="headerlink" title="IPADS - day-3"></a>IPADS - day-3</h3><p>OSDI中稿后不到一周就收到回复邮件了，感谢 reviewer 不杀之恩</p>
+<p>由于想报的是直博，所以有额外面试（实际上直硕感觉难度会低很多诶，现在也不知道这个选择是对是错，不过能读完的话，应该就是世间强者了！）</p>
+<p>老师让准备读一手论文，说本来准备时间更长的来着，一看就不到一周了</p>
+<p>那还能咋办，肝就完事了</p>
+<h3 id="IPADS-day-2"><a href="#IPADS-day-2" class="headerlink" title="IPADS - day-2"></a>IPADS - day-2</h3><p>经过一周的努力，我已经把论文背的滚瓜熟了！（错误的，只会说，理解属于是完全没有）</p>
+<p>面试是压力面，一上来就问创新性问题直接给人干傻了</p>
+<p>那还能咋办，只能凭想法现编啦</p>
+<p>结果…莫名其妙的没被问太穿？</p>
+<h3 id="IPADS-day-1"><a href="#IPADS-day-1" class="headerlink" title="IPADS - day-1"></a>IPADS - day-1</h3><p>吃饭的路上接到电话哩，拿到口头 offer ！</p>
+<h3 id="IPADS-day0"><a href="#IPADS-day0" class="headerlink" title="IPADS - day0"></a>IPADS - day0</h3><p>人生第一次到上海！太爽了这也！</p>
+<p>woc，这是哪里？五环？</p>
+<p>woc，这不沙河？</p>
+<p>坏哩，考上的话以后要在荒郊野外读大学了</p>
+<p>可是…，这是我学校20倍大诶</p>
+<p>好吧，原谅你了</p>
+<p>酒店的早餐还是不错的，中西自助.jpg</p>
+<p>蛋挞好吃！</p>
+<h3 id="IPADS-day1"><a href="#IPADS-day1" class="headerlink" title="IPADS - day1"></a>IPADS - day1</h3><p>简单的入营仪式</p>
+<p>品尝上交美食时间！</p>
+<p>呃呃，怎么只有几个食堂开放的</p>
+<p>唔，确实不太好恭维，不好吃（</p>
+<p>和PKU面试时认识的边大佬又见面了，确实是缘分！</p>
+<p>机试比PKU难了好多的样子</p>
+<p>最后大概是完成了90%?</p>
+<p>面试完和学长面了个基，不愧是本校学生才能吃的食堂，铁板烧好吃多了！</p>
+<p>听了听面试内容，感觉还是有点小慌，理论上对于创造性问题的要求比第一次面试还要难</p>
+<p>回酒店后狠狠突击了一手，哈哈day3才面试，小问题啦！</p>
+<h3 id="IPADS-day2"><a href="#IPADS-day2" class="headerlink" title="IPADS - day2"></a>IPADS - day2</h3><p>因为有两天时间准备自己选的论文的相关内容，所以一开始并不是很慌的，心想着按着自己的安排，理论上一天就能看完相关领域的所有 related paper 以及各项技术的相关优缺点，结果——</p>
+<p>“由于面试人数较多，您改完今日下午面试”</p>
+<p>寄！量子波动速读，启动！</p>
+<p>吃完了麦麦就冲向了学校</p>
+<p>但实际上，只要你不停的输出，面试主动权就是自己的啦</p>
+<p>我就是立体防御选手，问穿是不存在的！（多谢上交老师饶我一命）</p>
+<p>面完之后出来的时候感觉应该是没什么问题的了</p>
+<p>这下多了一天，怎么玩呢？</p>
+<h3 id="Shanghai-day3"><a href="#Shanghai-day3" class="headerlink" title="Shanghai - day3"></a>Shanghai - day3</h3><p>千载难逢的机会！哥们的上海一日游！</p>
+<p>诶？怎么来到大悦城了？看看有啥好玩的</p>
+<p>潮玩星球的咖啡厅，明日方舟主题，要预约啊</p>
+<p>嗯？怎么正好还有一个位置？</p>
+<p>下午5点，直接锁定！起飞！</p>
+<p>既然来都来了，手办店全逛一遍吧.jpg</p>
+<p>好看！都是我老婆！</p>
+<p>既然都是二次元了，那就把所有二次元景点全逛一边吧</p>
+<p>（然后就把整个上海跑了个遍，光是手机里的手办照片就有300+张…)</p>
+<p>水月鼠标垫好看！买！</p>
+<p>龙舌兰杯垫好看！可惜我没有…</p>
+<p>贪玩time结束，是面基的时间点了</p>
+<p>提着一堆奇怪的周边和复旦同学面了个基，见识了一手光华楼的高度</p>
+<p>NND，我们学校什么时候能有这么壮观的楼</p>
+<p>好大的草坪！可恶，小破游你争点气啊</p>
+<p>然后狠狠的坐两小时地铁回酒店（可恶，这通勤以后可是很苦的哇）</p>
+<p>Conclusion：这实在是太梦幻了！这应该是从小到大玩的最开心的一天了www，希望以后这样的日子多点！</p>
+<h3 id="IPADS-dayN"><a href="#IPADS-dayN" class="headerlink" title="IPADS - dayN"></a>IPADS - dayN</h3><p>拿到了工程博士的 offer ，听老师说是和学博一样的培养方案&amp;&amp;更难的毕业要求呢</p>
+<p>嘛，区区3篇A+成体系的毕业论文， ghostfly 是没有极限的！</p>
+<hr>
+<h3 id="计算所"><a href="#计算所" class="headerlink" title="计算所"></a>计算所</h3><p>计算所报的是智能处理器组的（寒武纪的诞生地）</p>
+<p>当上交名额还没出的时候面试了一下，老师感觉还行，不过后来拿到上交 offer 就咕了</p>
+<p>是的，懒狗就是这样</p>
+<hr>
+<h2 id="后记"><a href="#后记" class="headerlink" title="后记"></a>后记</h2><p>时间过得很快，转眼间那个高三踌躇满志的 ghostfly 已经将自己的大学篇画上结尾了</p>
+<p>回首自己这一生的路途，似乎每一次升学都是”此生仅有的机会”，而每次都似乎能抓住那看似不太可能的机会，或许确实是我这个人的运气比较好的样子。</p>
+<p>还是很感谢当初高三立下誓言的自己，对未来4年的我判断的那是相当准确。只要凭着一时冲动许下诺言，守信的我即使逐渐失去了心中所依，也不会食言。其实大学的三年也时常迷茫过，明显的感觉到自己一年比一年颓，毕竟任何BUFF都是会随着时间悄悄淡去的，那个高三暑假一天读14小时高数的我，应该是此生仅有了。</p>
+<p>大学三年经历的事情实在是太多了，至少自我感觉上，拼尽全力去书写这三年，我做到了。世界是平等的，失去的课余时间和社交活动，总会以另一种方式回报你。无数个眺望星空的夜晚，成为了现在的我的一部分。所以当最终点下接受按钮的时候，涌上心头的，是喜悦，但更多的是应得的平淡。</p>
+<p>我始终把朋友之间快乐的时光视为自己最重要的东西，因为朋友这种词汇对那个企图改写命运的我来说，太过奢侈了。很开心的是，虽然我的朋友不是很多，但是在这条注定需要经历痛苦的路上，不是自己一个人独自走着，是一种很棒的体验。</p>
+<p>经常有人说，我说别人强的时候是我在装弱，但实际上，我真心羡慕那些我所夸赞的人，他们或许在纸面上的成绩不如我所取得的，但是我丝毫不觉得他们的未来会比我暗淡。（就比如我的舍友们！他们都超强的！每个人都有自己独一无二的闪光点！全寝室保研的宿舍去哪里找啊喂！我以个人名义单方面宣布我们寝室是计算机学院最强寝室.jpg）</p>
+<p>想感谢的人总是有很多，多到一篇 BLOG 根本放不下，但是还是想在篇末的最后，对伟大的 <a target="_blank" rel="noopener" href="https://seven-mile.github.io/">seven-mile</a> 说一声谢谢。作为大学三年我始终在追逐的人，你教会了我很多。愿你能在未来仍能以自己的方式在漫天星辰中闪耀。</p>
+<p>也愿世间怀有梦想的人，在勇敢的和命运斗争后，仍怀揣着不变的初心，笑着迎接自己的结局。</p>
+<p>结局的好坏是很重要，但是追逐的过程，但是追逐的过程，才是人生最棒的意义，不是么？</p>
+<hr>
+<blockquote>
+<p>一章已尽，笔墨间终是不舍<br>但人非历史，总是要向前看<br>虽然不是天赋异禀，但我总会怀揣着最初的梦，继续在追逐星辰的道路走下去<br>因为，我的心中有着我最为珍视的回忆，它们提醒着我的初心，提醒着我失去过什么<br>它们会化作我最锐利的剑，斩断路上的一切荆棘</p>
+<p>铸剑师又要启程啦(´▽&#96;)ﾉ<br>未来会是什么呢？请带我看看吧！<br>PS：或许之后会是一个更正常一点的ID呢.jpg</p>
+</blockquote>
+
+    </div>
+    
+    
+    
+    
+    
+    
+    
+</div>
+
+                <footer id="footer">
+    <div id="footer-wrap">
+        <div>
+            &copy;
+            2022 - 2023 ghostfly の小窝
+            <span id="footer-icon">
+                <i class="fa-solid fa-font-awesome fa-fw"></i>
+            </span>
+            &commat;ghostfly
+        </div>
+        <div>
+            Based on the <a target="_blank" rel="noopener" href="https://hexo.io">Hexo Engine</a> &amp;
+            <a target="_blank" rel="noopener" href="https://github.com/theme-particlex/hexo-theme-particlex">ParticleX Theme</a>
+        </div>
+        
+    </div>
+</footer>
+
+            </div>
+            
+            <transition name="fade">
+                <div id="preview" ref="preview" v-show="previewShow">
+                    <img id="preview-content" ref="previewContent" />
+                </div>
+            </transition>
+            
+        </div>
+        <script src="/js/main.js"></script>
+        
+        
+
+
+
+
+        
+    </body>
+</html>
