@@ -39,7 +39,10 @@
 
 <link rel="stylesheet" href="/css/main.css" />
 
-    <meta name="generator" content="Hexo 6.3.0"></head>
+    <meta name="generator" content="Hexo 6.3.0"><link rel="stylesheet" href="\assets\css\APlayer.min.css" class="aplayer-style-marker">
+<script src="\assets\js\APlayer.min.js" class="aplayer-script-marker"></script>
+<script src="\assets\js\Meting.min.js" class="meting-script-marker"></script>
+</head>
     <body>
         <div id="layout">
             <transition name="fade">
@@ -189,7 +192,7 @@
             
             <span class="tag">
                 
-                <a href="/tags/Diary/" style="color: #ffa2c4">Diary</a>
+                <a href="/tags/Diary/" style="color: #03a9f4">Diary</a>
             </span>
             
         </span>
@@ -197,8 +200,28 @@
     </div>
     
     <div class="content" v-pre>
-        <h1 id="夏令营游记"><a href="#夏令营游记" class="headerlink" title="夏令营游记"></a>夏令营游记</h1><hr>
-<h3 id="填报-day"><a href="#填报-day" class="headerlink" title="填报 - day-?"></a>填报 - day-?</h3><p>报夏令营前还是比较自信的，大概有想去的念头的就TP、上交、北航和计算所，所以就报了清叉，THUCS，PKUCS，上交IPADS、北航CS &amp;&amp; 计算所。实际上倒也对自己的判断比较准确，北航应该是能够保底的，TP上交大概总能进一个的吧？</p>
+        <blockquote>
+<p>风息云散，是告别的时节<br>梦总是过的短暂，但却刻骨铭心</p>
+</blockquote>
+<hr>
+
+    <div id="aplayer-ARchmxqP" class="aplayer aplayer-tag-marker meting-tag-marker"
+         data-id="729442" data-server="netease" data-type="song" data-mode="circulation" data-autoplay="true" data-mutex="true" data-listmaxheight="340px" data-preload="auto" data-theme="#555"
+    ></div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script> 
+let ref = setInterval(function(){	//每隔2秒尝试播放一次
+    isaplay();
+},2000);
+function isaplay(){
+    $(".aplayer-play").click()	//尝试播放
+    setTimeout(function() {		//延时100毫秒再执行其内部的判断
+        if($(".aplayer-pause").length > 0){    //`aplayer-button aplayer-pause`是否存在
+        clearInterval(ref);		//停止Interval，即停止循环
+    }}, 100);
+}
+</script>
+<p>报夏令营前还是比较自信的，大概有想去的念头的就TP、上交、北航和计算所，所以就报了清叉，THUCS，PKUCS，上交IPADS、北航CS &amp;&amp; 计算所。实际上倒也对自己的判断比较准确，北航应该是能够保底的，TP上交大概总能进一个的吧？</p>
 <p>文笔实在是差，所以就按时间顺序来哩</p>
 <hr>
 <h2 id="清华"><a href="#清华" class="headerlink" title="清华"></a>清华</h2><p>我去！是清华！高中梦校！</p>
