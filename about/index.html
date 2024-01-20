@@ -34,10 +34,6 @@
 
 
 
-<script src="https://cdn.staticfile.org/waline/2.15.5/waline.min.js"></script>
-<link rel="stylesheet" href="https://cdn.staticfile.org/waline/2.15.5/waline.min.css" />
-<link rel="stylesheet" href="https://cdn.staticfile.org/waline/2.15.5/waline-meta.min.css" />
-
 
 
 
@@ -240,10 +236,10 @@ function isaplay(){
     
     
     
-    
     <div id="comment">
-        <div id="waline-container"></div>
+        <div id="giscus-container" class="giscus"></div>
     </div>
+    
     
     
     
@@ -279,24 +275,24 @@ function isaplay(){
         <script src="/js/main.js"></script>
         
         
+<script
+    src="https://giscus.app/client.js"
+    data-repo="ghostfly23333/giscus"
+    data-repo-id="R_kgDOLHMbKw"
+    data-category="Announcements"
+    data-category-id="DIC_kwDOLHMbK84CcjYO"
+    data-mapping="pathname"
+    data-strict="1"
+    data-reactions-enabled="1"
+    data-emit-metadata="1"
+    data-input-position="bottom"
+    data-theme="preferred_color_scheme"
+    data-lang="zh-CN"
+    crossorigin
+    async
+></script>
 
 
-<script>
-    Waline.init({
-        el: "#waline-container",
-        serverURL: "https://vercel-i9npa7tvf-ghostfly23333.vercel.app/",
-        commentCount: true,
-        pageview: false,
-        emoji: "https://unpkg.com/@waline/emojis@1.2.0/weibo,https://unpkg.com/@waline/emojis@1.2.0/alus,https://unpkg.com/@waline/emojis@1.2.0/bilibili,https://unpkg.com/@waline/emojis@1.2.0/qq,https://unpkg.com/@waline/emojis@1.2.0/tieba,https://unpkg.com/@waline/emojis@1.2.0/tw-emoji".split(","),
-        meta: "nick,mail,link".split(","),
-        requiredMeta: "nick".split(","),
-        lang: "",
-        wordLimit: 0,
-        pageSize: "10",
-        login: "enable",
-        
-    });
-</script>
 
 
 
