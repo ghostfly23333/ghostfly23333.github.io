@@ -1,0 +1,368 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>2023年终总结 | ghostfly の小窝</title>
+        <meta name="author" content="ghostfly" />
+        <meta name="description" content="" />
+        <meta name="keywords" content="" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+        <link rel="icon" href="/images/preview.jpg" />
+        <script src="https://cdn.staticfile.org/vue/3.3.4/vue.global.prod.min.js"></script>
+<link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/6.4.0/css/all.min.css" />
+<link rel="stylesheet" href="/css/fonts.min.css" />
+<script> const mixins = {}; </script>
+
+<script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+
+
+<script src="https://cdn.staticfile.org/highlight.js/11.8.0/highlight.min.js"></script>
+<script src="https://cdn.staticfile.org/highlightjs-line-numbers.js/2.8.0/highlightjs-line-numbers.min.js"></script>
+<link
+    rel="stylesheet"
+    href="https://cdn.staticfile.org/highlight.js/11.8.0/styles/github.min.css"
+/>
+<script src="/js/lib/highlight.js"></script>
+
+
+
+<script src="/js/lib/preview.js"></script>
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/css/main.css" />
+
+    <meta name="generator" content="Hexo 6.3.0"><link rel="stylesheet" href="\assets\css\APlayer.min.css" class="aplayer-style-marker">
+<script src="\assets\js\APlayer.min.js" class="aplayer-script-marker"></script>
+<script src="\assets\js\Meting.min.js" class="meting-script-marker"></script>
+</head>
+    <body>
+        <div id="layout">
+            <transition name="fade">
+                <div id="loading" v-show="loading">
+                    <div id="loading-circle">
+                        <h2>LOADING</h2>
+                        <p>加载过慢请开启缓存 浏览器默认开启</p>
+                        <img src="/images/loading.gif" />
+                    </div>
+                </div>
+            </transition>
+            <div id="menu" :class="{ hidden: hiddenMenu, 'menu-color': menuColor}">
+    <nav id="desktop-menu">
+        <a class="title" href="/">
+            <span>GHOSTFLY の小窝</span>
+        </a>
+        
+        <a href="/">
+            <i class="fa-solid fa-house fa-fw"></i>
+            <span>&ensp;Home</span>
+        </a>
+        
+        <a href="/about">
+            <i class="fa-solid fa-id-card fa-fw"></i>
+            <span>&ensp;About</span>
+        </a>
+        
+        <a href="/archives">
+            <i class="fa-solid fa-box-archive fa-fw"></i>
+            <span>&ensp;Archives</span>
+        </a>
+        
+        <a href="/categories">
+            <i class="fa-solid fa-bookmark fa-fw"></i>
+            <span>&ensp;Categories</span>
+        </a>
+        
+        <a href="/tags">
+            <i class="fa-solid fa-tags fa-fw"></i>
+            <span>&ensp;Tags</span>
+        </a>
+        
+        <a href="/gifts">
+            <i class="fa-solid fa-gifts fa-fw"></i>
+            <span>&ensp;Gifts</span>
+        </a>
+        
+    </nav>
+    <nav id="mobile-menu">
+        <div class="title" @click="showMenuItems = !showMenuItems">
+            <i class="fa-solid fa-bars fa-fw"></i>
+            <span>&emsp;GHOSTFLY の小窝</span>
+        </div>
+        <transition name="slide">
+            <div class="items" v-show="showMenuItems">
+                
+                <a href="/">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-house fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Home</div>
+                    </div>
+                </a>
+                
+                <a href="/about">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-id-card fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">About</div>
+                    </div>
+                </a>
+                
+                <a href="/archives">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-box-archive fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Archives</div>
+                    </div>
+                </a>
+                
+                <a href="/categories">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-bookmark fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Categories</div>
+                    </div>
+                </a>
+                
+                <a href="/tags">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-tags fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Tags</div>
+                    </div>
+                </a>
+                
+                <a href="/gifts">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-gifts fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Gifts</div>
+                    </div>
+                </a>
+                
+            </div>
+        </transition>
+    </nav>
+</div>
+<transition name="fade">
+    <div id="menu-curtain" @click="showMenuItems = !showMenuItems" v-show="showMenuItems"></div>
+</transition>
+
+            <div id="main" :class="loading ? 'into-enter-from': 'into-enter-active'">
+                <div class="article">
+    <div>
+        <h1>2023年终总结</h1>
+    </div>
+    <div class="info">
+        <span class="date">
+            <span class="icon">
+                <i class="fa-solid fa-calendar fa-fw"></i>
+            </span>
+            2024/1/27
+        </span>
+        
+        <span class="category">
+            <a href="/categories/%E6%97%A5%E5%B8%B8/">
+                <span class="icon">
+                    <i class="fa-solid fa-bookmark fa-fw"></i>
+                </span>
+                日常
+            </a>
+        </span>
+        
+        
+        <span class="tags">
+            <span class="icon">
+                <i class="fa-solid fa-tags fa-fw"></i>
+            </span>
+            
+            
+            <span class="tag">
+                
+                <a href="/tags/Diary/" style="color: #ff7d73">Diary</a>
+            </span>
+            
+        </span>
+        
+    </div>
+    
+    <div class="content" v-pre>
+        <blockquote>
+<p>对命运之神表示感激！<br>2023像个大学生一样活着！</p>
+</blockquote>
+<hr>
+
+    <div id="aplayer-VDTZjIJy" class="aplayer aplayer-tag-marker meting-tag-marker"
+         data-id="22707013" data-server="netease" data-type="song" data-mode="circulation" data-autoplay="true" data-mutex="true" data-listmaxheight="340px" data-preload="auto" data-theme="#555"
+    ></div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script> 
+let ref = setInterval(function(){	//每隔2秒尝试播放一次
+    isaplay();
+},2000);
+function isaplay(){
+    $(".aplayer-play").click()	//尝试播放
+    setTimeout(function() {		//延时100毫秒再执行其内部的判断
+        if($(".aplayer-pause").length > 0){    //`aplayer-button aplayer-pause`是否存在
+        clearInterval(ref);		//停止Interval，即停止循环
+    }}, 100);
+}
+</script>
+<h2 id="2023年想做的事！"><a href="#2023年想做的事！" class="headerlink" title="2023年想做的事！"></a>2023年想做的事！</h2><ul>
+<li>发篇OSDI <span class="github-emoji" alias="white_check_mark" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2705.png?v8">&#x2705;</span></li>
+<li>有个学上 <span class="github-emoji" alias="white_check_mark" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2705.png?v8">&#x2705;</span></li>
+<li>找到命定之人</li>
+<li>像个<del>大学生</del>二次元一样划水！<ul>
+<li>去个漫展！ <span class="github-emoji" alias="white_check_mark" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2705.png?v8">&#x2705;</span></li>
+<li>听个音乐会！ <span class="github-emoji" alias="white_check_mark" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2705.png?v8">&#x2705;</span> <span class="github-emoji" alias="white_check_mark" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2705.png?v8">&#x2705;</span></li>
+<li>在二次元圣地狠狠的逛街！ <span class="github-emoji" alias="white_check_mark" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2705.png?v8">&#x2705;</span></li>
+<li>捡个乐器练练！ <span class="github-emoji" alias="white_check_mark" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2705.png?v8">&#x2705;</span></li>
+<li>过个生日聚会！ <span class="github-emoji" alias="white_check_mark" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2705.png?v8">&#x2705;</span></li>
+</ul>
+</li>
+</ul>
+<hr>
+<p>在2023年开始之前，就给自己列了个简要的list，想了想这一年打算做啥。现在来看，2023还是很梦幻的一年的，虽然有的事情没能完成（你知道我说的是什么事情！对吧！<span class="github-emoji" alias="crying_cat_face" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f63f.png?v8">&#x1f63f;</span>）</p>
+<h3 id="大三下"><a href="#大三下" class="headerlink" title="大三下"></a>大三下</h3><p>大三下总的来说是个很忙的一年。12月~3月天天都笼罩在稿子不一定能中以后怎么有学上的阴影之中。在老师的push下每天想的都是：啊，活下来就算成功。rebuttal之前看到超低的分数后觉得必没戏，结果在rebuttal之后竟然过了，这就是命运之神的庇佑.jpg<br>虽然论文过了，但是生活只会更惨<span class="github-emoji" alias="crying_cat_face" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f63f.png?v8">&#x1f63f;</span> 除了每天都在和AE的实验数据和脚本做斗争，还要抽时间准备面试（高等数学？线性代数？英语自我介绍？论文阅读？ヽ(；´Д｀)ﾉ）像人的日子没过几天，感觉每天都在扮演机器人<span class="github-emoji" alias="innocent" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f607.png?v8">&#x1f607;</span><br>AE结束算是松了第一口气，准备夏令营的材料和安排夏令营<del>旅游</del>的日程，就和每个大三的保研人一样虽然也一样的忙，但是感觉也很稀疏平常的样子，或许是大学三年的高强度学习之后，自己已经习惯了吧（<del>你承认你是卷王了！是吧！？</del>）。唯一值得纪念的，就是去上海狠狠的去手办店和各种书店逛了个爽（<del>回家了，真的回家了！</del>）<br>最终，确认志愿作为了上半年的小小句号。</p>
+<h3 id="大四上"><a href="#大四上" class="headerlink" title="大四上"></a>大四上</h3><p>在确认了升学相关事项后，收到了2024要去上海的消息。大四上即将成为在北邮生活的最后半年。<br>所以，趁着还没有从大学毕业，还是得做点大学生有关系的事情。对吧！<br>所以 ghostfly 尝试了一下每个大学生都会做的事情：狠狠的玩.jpg</p>
+<h4 id="漫展？买点谷子！"><a href="#漫展？买点谷子！" class="headerlink" title="漫展？买点谷子！"></a>漫展？买点谷子！</h4><p>国庆的时候，去了一趟IJOY，坦白来说，相比于 BW 和 C103 这种真的超大的展子，只能算是小打小闹（虽然 BW 和 CM 都完全没机会去.jpg）但是身为二次元，<del>这是迈向现充的第一步！</del><br>实际上对于一个社恐来说，漫展这种超多人的地方就像不可逾越的鸿沟。但实际上好像带个口罩好像存在感顿时就低了，所以逛着就和小透明一样，也不是那么的害怕.jpg<br>第一次和coser合影身为社恐人举手机的手都在抖 （<span class="github-emoji" alias="crying_cat_face" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f63f.png?v8">&#x1f63f;</span> 照片都是胡的真是太没用哩！）<br>大概在漫展里做了以下的事情</p>
+<ul>
+<li>买了点孤独摇滚的周边（很好的周边，令我的钱包旋转！）</li>
+<li>在电音舞台听<del>唱</del>了个爽（二次元的电音节？）</li>
+<li>看了好久的LL舞台（LL入坑契机，其实之前没看完LL，漫展回去之后就补完了μ’s的差不多所有内容）</li>
+<li>coser集邮（抛去常见角色以外，印象比较深的应该就是艾拉、团长和小孤独）</li>
+</ul>
+<h4 id="音乐"><a href="#音乐" class="headerlink" title="音乐"></a>音乐</h4><p>大四上最多的生活成就全点在了音乐上了。从小学5年级考完钢琴10级之后，感觉除了日常听歌和偶尔唱唱歌以外就再也没有花时间在音乐这上面了。小时候学钢琴，一开始也就是因为旋律好听，然后就进坑了，但是不得不承认，学古典是比较枯燥的，除了599 849 哈农以外，如果有练曲子也就是考级的内容了。那时候感觉周围的人都在学钢琴，所以完成考级更像是一项任务。考完10级之后也就没有后续了。现在想来，虽然枯燥，但是毫无疑问这段经历还是给了比较丰富的乐理知识、乐感和钢琴基本功基础的，当然考级本身我感觉确实啥用也没有。</p>
+<p>每次和别人谈起歌单的时候总会发现只有我的歌单是 “成分极其复杂”。古风，纯音乐，日系，电音，基本上啥都听。如果说有什么特点，就是有词的歌可能女生唱的歌会多一些（KTV找遍歌单都找不到能唱的真是悲伤(⊙︿⊙)）因为旋律上女生唱的歌的旋律变化通常会更丰富一些，音域上也会更广。所以感觉相比于音乐风格，我更喜欢的可能是音乐的旋律本身。层次丰富的音乐自己听的时候有时候可能每个声部都会单独听一遍。这大概也是我经常对某些OST情有独钟的原因。</p>
+<h5 id="Concert-Time"><a href="#Concert-Time" class="headerlink" title="Concert Time!"></a>Concert Time!</h5><p>作为纯音爱好者之一，去听音乐会当然是不二之选哩。当然由于带了一点二次元属性，2023年去的音乐会总共是三场。</p>
+<ul>
+<li>宫崎骏《天空之城》系列</li>
+<li>“春日计划” 京阿尼系列</li>
+<li>帝玖的十周年ACG交响音乐会</li>
+</ul>
+<p>虽然比较贫穷，买的都是比较偏的位置，但是音乐会这种东西吧，当在现场的时候，在哪个地方都会很享受的<del>除非你想抢到乐团MC的小礼物</del><br>总体上来说有句话还是有道理的，喜欢的歌曲被改编成交响真是莫大的幸福！</p>
+<h5 id="Piano！I‘m-back"><a href="#Piano！I‘m-back" class="headerlink" title="Piano！I‘m back!"></a>Piano！I‘m back!</h5><p>以前学钢琴的时候经常被问到说有没有打算学一个其他的乐器。毕竟钢琴不易于搬运，且想拥有一台自己的钢琴也是不小的经济负担，弹琴也会吵到邻居什么的。</p>
+<p>你说的对！所以以前我没有自己的钢琴:(</p>
+<p>但是其实学完之后发现，作为普世意义上的乐器之王，钢琴能表达的情感和层次远远比其他乐器强大的多，十根手指，不同的力度和三个踏板，给了钢琴无与伦比的叙述能力。一首好的钢琴曲子，是能完整的描述一个画面的。</p>
+<p>虽然5年级之后就再也没有练过琴了，但是高中和大学期间还是经常看钢琴的演奏视频。大学期间，看A叔的日子逐渐多了起来。身为二次元爱好者，想自己弹点曲子，不用被钢琴老师拽着练基本功的伟大梦想每天都在刺激大脑。</p>
+<p>大一在沙河校区的时候，由于忙着学业确实没抽出什么时间，到了本部对着八人间宿舍小到令人发指的室内走廊又发愁了不知多少岁月。</p>
+<p>大四上想着，怎么也得在大学结束之前满足点自己的小小愿望。所以在国庆的时候和舍友完全没考虑到底能不能真的弹上就忍痛下单了最便宜的电钢。为了手感还选了比较贴合真钢的重锤键盘（类似擒纵结构的设计）为了放下这个庞大的伙伴牺牲了舍友的一张桌子，但是确确实实在极其狭小的宿舍完成了摆放，这一定是奇迹！</p>
+<p>有了钢琴之后就是快乐的练琴time。一开始摸了几天哈农，后来手感稍微上来了一点就开始摸曲子了。<br>一开始对自己的水平不太有判定标准，也不懂曲子的难度，所以选了A叔的key社三部曲中的第一部鸟之诗。三部曲的好消息就是，曲谱很短，坏消息就是，难度有那么一点点的夸张…</p>
+<p>刚开始练琴的动力还是比较足的，毕竟怎么说也是人生中触手可及的位置能有个键盘。大概7天可能会练个5天，每天2~3小时这样子。大概完整能弹一遍鸟之诗画了两周的样子（非原速，高潮都是糊过去的）。明显感受到了A叔谱子的难度</p>
+<p>后来就想着还是从简单的开始吧，于是选了A叔最为简单也是我最想在大四上弹一遍的曲子——《未闻花名》虽然但是最后好像也没几个人听到过就是了ww (不知道 ghostfly 的情感有没有传达到呢？）但是无疑这是一首有余力来控制情感和投入自己的理解的曲子，虽然后面练了很多曲子，但是我觉得未闻花名真的是在弹奏时发挥最稳定的曲子了（唯一的问题就是太久没弹会忘谱）</p>
+<p>练了两首之后为了保持手感每天都是先把会的曲子弹一遍，然后再练新的，慢慢的手感和控制度也稍微上来了有点，虽然鸟之诗还是一样的菜。高速跑动维持颗粒性感觉确实得把古典一套的训练系统捡起来才能弹得好哩。</p>
+<p>后续练了好多曲子，大概list里有这些：</p>
+<ul>
+<li>华散之缘 - 稻妻OST（为数不多印象深刻的原神OST，顺手练了1天就摸完了）</li>
+<li>Connect - 魔圆 （小圆！你怎么想弹有层次感这么难哩）</li>
+<li>Butterfly - A叔full ver.（高潮对杂鱼的我真的超难）</li>
+<li>团子大家族ED - CLANNAD (简单，神作，没有不练的道理吧.jpg)</li>
+<li>ReAliZe - 9nine（9nine的BGM都很香啊！）</li>
+<li>Summer和某些“众所周知”的钢琴曲 (简单又好听的歌曲他不香吗！)</li>
+<li>其他杂七杂八的曲子片段..</li>
+</ul>
+<p>后续想填的坑：</p>
+<ul>
+<li>theme of SSS - Angel Beats!</li>
+<li>Sincerely - 紫罗兰</li>
+<li>βios - 罪恶王冠</li>
+<li>CLANNAD OST</li>
+<li>unravel &amp;&amp; my dearest（我就是说说，我就是说说）</li>
+<li>其他动漫歌曲和OST们….</li>
+</ul>
+<p>寒假回来买了雅马哈的P225，博士期间应该它就是哥们的新伙伴哩！</p>
+<h4 id="毕设Time！"><a href="#毕设Time！" class="headerlink" title="毕设Time！"></a>毕设Time！</h4><p>大四上还有一大部分生活就是在师兄的指导下去做一份毕设。这也是我觉得大四上很棒的一部分。虽然确实在过程中会遇到很多很奇怪的也比较底层的问题。但是不论解决问题的过程还是逐渐掌握整份代码框架和其中的运行原理这一过程都令我受益匪浅。IPADS的组会是我最喜欢的环节，没有之一。每次组会师兄师姐们分享论文之后，自己总会挑一些自己感兴趣的部分去额外看看具体的实现，和舍友们一起探讨<del>胡说</del>相关技术的局限性和想法。（超棒的舍友是变强的必需品！）</p>
+<p>总体来说现在面对一个编程级别的问题能以一个比较系统的角度来尝试剖析了，从汇编一层层往上，平常遇到问题的时候也常常会问自己这个体系有没有优化空间，每个结构的作用会是什么，未来有没有什么能研究的内容这样子。虽然只是浅尝辄止，但是我想随着专业能力的提升，慢慢的这些小小的想法应该是能变成 real thinking，最终转换成 true idea 的。虽然和真正的大佬还有很大的差异，自己会的东西也很少，平常也经常抱住 7mile 的大腿，但是我想总有一天会成为能独挡一面的人的。</p>
+<p>毕设的构想感觉基本上是完成了，希望下半年能把自己的想法写成毕设顺利毕业吧！</p>
+<h4 id="过个生日！"><a href="#过个生日！" class="headerlink" title="过个生日！"></a>过个生日！</h4><p>其实对于正常的大学生来说，这应该不是很重要的条目值得专门写一段……</p>
+<p>但对于从小就是社恐，从来没办过生日聚会的 ghostfly 来说，还是很有值得纪念的价值。</p>
+<p>ghostfly 过的很开心！感谢舍友们！</p>
+<p>希望在未来的路里，能一直像聚会那天一样！</p>
+<hr>
+<p>每次写这种东西的时候都非常感慨，也许是想让生活有点仪式感，所以每一年都想向着最有意义的生活方式去过。</p>
+<p>以前总是想着，一切事情只要做了就不会有遗憾，只要青春能以最绚烂的方式绽放就足够了。令我惊异的是，它已经以如此独特的方式在我的生命线中燃烧了如此之久的岁月。</p>
+<p>或许博士毕业或是更短的时间里，自己会逐渐成为那个成熟的大人。但是由衷希望自己的这种不太居于实际，不需要为现实妥协的想法能持续的再久一点，如果是一辈子就更好了。</p>
+<p>2023是超级满足的一年，希望2024也能是。</p>
+<p>人生就是由自己演绎的命运之舞台，希望 ghostfly 2024 也能有完美的谢幕！</p>
+
+    </div>
+    
+    
+    
+    
+    <div id="comment">
+        <div id="giscus-container" class="giscus"></div>
+    </div>
+    
+    
+    
+    
+</div>
+
+                <footer id="footer">
+    <div id="footer-wrap">
+        <div>
+            &copy;
+            2022 - 2024 ghostfly の小窝
+            <span id="footer-icon">
+                <i class="fa-solid fa-font-awesome fa-fw"></i>
+            </span>
+            &commat;ghostfly
+        </div>
+        <div>
+            Based on the <a target="_blank" rel="noopener" href="https://hexo.io">Hexo Engine</a> &amp;
+            <a target="_blank" rel="noopener" href="https://github.com/theme-particlex/hexo-theme-particlex">ParticleX Theme</a>
+        </div>
+        
+    </div>
+</footer>
+
+            </div>
+            
+            <transition name="fade">
+                <div id="preview" ref="preview" v-show="previewShow">
+                    <img id="preview-content" ref="previewContent" />
+                </div>
+            </transition>
+            
+        </div>
+        <script src="/js/main.js"></script>
+        
+        
+<script
+    src="https://giscus.app/client.js"
+    data-repo="ghostfly23333/giscus"
+    data-repo-id="R_kgDOLHMbKw"
+    data-category="Announcements"
+    data-category-id="DIC_kwDOLHMbK84CcjYO"
+    data-mapping="pathname"
+    data-strict="1"
+    data-reactions-enabled="1"
+    data-emit-metadata="1"
+    data-input-position="bottom"
+    data-theme="preferred_color_scheme"
+    data-lang="zh-CN"
+    crossorigin
+    async
+></script>
+
+
+
+
+
+        
+    </body>
+</html>
